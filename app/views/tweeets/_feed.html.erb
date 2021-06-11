@@ -20,10 +20,11 @@
         </div>
         <div class = "media-content">
             <div class = "content">
-                <strong>Elvis Githinji </strong>
-                <small>@elvisgithinji </small>
+                <strong><%= tweeet.user.name %> </strong> <br>
+                <small>@<%=tweeet.user.username %></small>
                 <p><%= tweeet.tweeet %> </p>
             </div>
+            <% if user_signed_in? %> 
             <nav class = "level" >
                 <div class = "level-left is-mobile">
                     <%= link_to tweeet, class: "level-item" do %>
@@ -38,6 +39,7 @@
                    
                 </div>
             </nav>
+            <%end%>
         </div>
     </article>
     </div>
